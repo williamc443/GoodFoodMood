@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>GFM Home</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.typekit.net/iqd3atl.css">
+
+    <link rel="stylesheet" href="css/recipe.css" />
+    <link rel="stylesheet" href="css/header.css" />
+
+    <link rel="stylesheet" href="library/font-awesome/css/all.css">
+    <link rel="stylesheet" href="library/font-awesome/css/brands.css">
+    <link rel="stylesheet" href="library/font-awesome/css/fontawesome.css">
+    <link rel="stylesheet" href="library/font-awesome/css/regular.css">
+    <link rel="stylesheet" href="library/font-awesome/css/solid.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
+    <script src="js/navbar.js"></script>
+</head>
+
+<body>
+      <header class="header">
+          <div id="logo-container">
+              <img src="images/logo3.png" id="logo" alt="greenfork&spoon">
+          </div>
+          <div class="GFM">
+              <a class="header-logo" href="index.html"><h2 id="indexH1">Good Food Mood</h2></a>
+              <div class="nav-container">
+                  <na id="nav" class="nav">
+                      <li><a href="index.html">Home</a></li>
+                      <li class="active"><a href="recipe.html">Recipies</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                      
+                  </nav>
+              </div>
+              <div class="search">
+                  <i class="fas fa-search"></i>
+                  <input id="search" type="text" class="form-control" placeholder="Search..">
+              </div>
+              <div class="nav-dropdown ml-3">
+                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bars"></i>
+                  </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="index.html">Home</a>
+                    <a class="dropdown-item" href="recipe.html">Recipies</a>
+                    <a class="dropdown-item" href="contact.html">Contact</a>
+                  </div>
+                </div>
+          </div>
+      </header>
+
+        <main>
+          <div class="container">
+            <div class="row">
+              <div id="sidebar" class="col-sm-4 col-md-4 col-xl-3">
+                <h1>Recipes</h1>
+                <ul class="list">
+                  <li class="j-list">
+                      <div class="list-header" onclick="viewDetail(this)">
+                        <span class="txt">Categori</span>
+                        <i class="fas fa-chevron-down"></i>
+                      </div>
+                      <div class="list-content" id="1">
+                        <div><label for="healthy">healthy</label><input id="healthy" class="check_btn" value="healthy" type="checkbox"> </div>
+                        <div><label for="ouick">Quick</label><input id="ouick" class="check_btn" value="Quick" type="checkbox"> </div>
+                        <div><label for="family">Family</label><input id="family" class="check_btn" value="Family" type="checkbox"> </div>
+                        <div><label for="traditional">Traditional</label><input id="traditional" class="check_btn" value="Traditional" type="checkbox"> </div>
+                      </div>
+                  </li>
+                  <li class="j-list">
+                    <div class="list-header" onclick="viewDetail(this)">
+                      <span class="txt">Type of meal</span>
+                      <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="list-content" id="2">
+                      <div><label for="dinner_plate">Dinner plate</label><input id="dinner_plate" class="check_btn" value="dinner plate" type="checkbox"> </div>
+                      <div><label>Breakfast</label><input class="check_btn" value="breakfast" type="checkbox"> </div>
+                      <div><label>Egg dishes</label><input class="check_btn" value="egg dishes" type="checkbox"> </div>
+                      <div><label>Vegan</label><input class="check_btn" value="vegan" type="checkbox"> </div>
+                      <div><label>Salads</label><input class="check_btn" value="salad" type="checkbox"> </div>
+                      <div><label>Cakes</label><input class="check_btn" value="cake" type="checkbox"> </div>
+                      <div><label>Side dish</label><input class="check_btn" value="side dish" type="checkbox"> </div>
+                      <div><label>Desserts</label><input class="check_btn" value="dessert" type="checkbox"> </div>
+                      <div><label>Appetizer</label><input class="check_btn" value="appetizer" type="checkbox"> </div>
+                      <div><label>Bread</label><input class="check_btn" value="bread" type="checkbox"> </div>
+                      <div><label>Soup</label><input class="check_btn" value="soup" type="checkbox"> </div>
+                      <div><label>Beverage</label><input class="check_btn" value="beverage" type="checkbox"> </div>
+                      <div><label>Sauce</label><input class="check_btn" value="sauce" type="checkbox"> </div>
+                      <div><label>Drink</label><input class="check_btn" value="drink" type="checkbox"> </div>
+                    </div>
+                  </li>
+                  <li class="j-list">
+                    <div class="list-header" onclick="viewDetail(this)">
+                      <span class="txt">Allergenes</span>
+                      <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="list-content" id="3">
+                      <div><label for="gluten">Gluten</label> <input id="gluten" class="check_btn" value="gluten" type="checkbox"> </div> 
+                      <div><label for="egg">Egg</label><input  id="egg" class="check_btn" value="egg" type="checkbox"> </div>
+                      <div><label for="peanuts">Peanuts</label><input  id="peanuts" class="check_btn" value="peanut" type="checkbox"> </div>
+                      <div><label for="milk">Milk</label><input  id="milk" class="check_btn" value="milk" type="checkbox"> </div>
+                      <div><label for="fish">Fish</label><input  id="fish" class="check_btn" value="fish" type="checkbox"> </div>
+                      <div><label for="soya">Soya</label><input  id="soya" class="check_btn" value="soya" type="checkbox"> </div>
+                      <div><label for="dairy">Dairy</label> <input  id="dairy" class="check_btn" value="Dairy" type="checkbox"> </div>
+                      <div><label for="sesame">sesame</label><input  id="sesame" class="check_btn" value="sesame" type="checkbox"> </div>
+                      <div><label for="seafood">Seafood</label><input  id="seafood" class="check_btn" value="seafood" type="checkbox"> </div>
+                      <div><label for="shellfish">Shellfish</label><input  id="shellfish" class="check_btn" value="shellfish" type="checkbox"> </div>
+                      <div><label for="soy">Soy</label><input  id="soy" class="check_btn" value="soy" type="checkbox"> </div>
+                      <div><label for="sulfite">Sulfite</label><input  id="sulfite" class="check_btn" value="Sulfite" type="checkbox"> </div>
+                      <div><label for="tree">Tree nut</label><input  id="tree" class="check_btn" value="tree nut" type="checkbox"> </div>
+                      <div><label for="wheat">Wheat</label><input  id="wheat" class="check_btn" value="Wheat" type="checkbox"> </div>
+                    </div>
+                  </li>
+                  <li class="j-list">
+                    <div class="list-header" onclick="viewDetail(this)">
+                      <span class="txt">Time too cook</span>
+                      <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="list-content" id="4">
+                      <div><label for="20min">10 - 20 min</label><input id="20min" class="check_btn" min="10" value="20" name="gender" type="radio"> </div>
+                      <div><label for="30min">15-30 min</label><input id="30min" class="check_btn" min="15" value="30"  name="gender"  type="radio"> </div>
+                      <div><label for="40min">20 - 40 min</label> <input id="40min" class="check_btn" min="20" value="40"  name="gender"  type="radio"> </div>
+                      <div><label for="60min">40 - 60 min </label><input id="60min" class="check_btn" min="40"  value="60"  name="gender"  type="radio"> </div>
+                      <div><label for="over_min">Over 60 min </label><input id="over_min" class="check_btn" min="40"  value=""  name="gender"  type="radio"> </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-sm-8 col-md-8 col-xl-9 search-result">
+                <!-- <i id="bars" onclick="toggleSidebar(this)" class="fas fa-bars"></i> -->
+                <div class="text-center heading">Popular A-Z</div>
+                <div class="results"></div>
+                <div id="pagination-container" class="mt-4"></div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div class="footer">
+          <div class="footer-inner">
+            <img class="footer-img" src="images/logo3.png" id="logo" alt="greenfork&spoon">
+            <p class="mt-5">Copyrights GFM</p>
+            <p>Salad st. 101 Norway</p>
+            <div>
+              <i class="fab fa-facebook-f mx-1"></i>
+              <i class="fab fa-twitter mx-1"></i>
+              <i class="fas fa-camera mx-1"></i>
+              <i class="fas fa-envelope mx-1"></i>
+              <i class="fas fa-phone mx-1"></i>
+            </div>
+          </div>
+        </div>
+        
+        <script src="js\recipe.js"></script>
+      </span>
+
+      <div id="overlay">
+        <div class="cv-spinner">
+          <span class="spinner"></span>
+        </div>
+      </div>
+</body>
+
+</html>
