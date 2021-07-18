@@ -1,14 +1,17 @@
 
-fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=1&tags=vegetarian%2Cdessert", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "4274e21671msh77a8a5b0f3909f8p1f940ejsn032c9883e186",
-		"x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+$(document).ready(function(){
+	$(".recepie-img").click(function(){
+		var id = $(this).attr("id");
+		location.href = `detail.php?id=${id}`;
+	})
+
+	const width = window.innerWidth;
+	if(width <= 600){
+		$(".nav-container").hide()
+		$("#indexH1").hide()
+		$(".nav-dropdown").show()
+	}else{
+		$(".nav-container").show()
+		$(".nav-dropdown").hide()
 	}
 })
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
